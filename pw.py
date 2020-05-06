@@ -1,5 +1,5 @@
 #! python3
-
+pt
 PASSWORDS = {'email' : 'F7minlBDDuvMJuxESSKHhTxFtjVB6',
              'blog' : 'VmALvQyKAxiVH5G8v0lif1MLZ3sdt',
              'luggage' : '12345'}
