@@ -5,15 +5,20 @@ import re, pyperclip, tkinter
 from tkinter import messagebox
 
 def tp():
+    #テキストボックスからインプット
     text =input_box.get()
+
+    #余計な部分を検索し、・に置き換え。
     text_regex = re.compile(r'\d\d:\d\d:\d\d\s\s開始\s?[A-Z]?-?\d?\d?-?\d?\d?[-]?\s?\s?[-]?')
     new_text = text_regex.sub('・', text)
    
+    #カンマとコロンを置き換え
     comma_regex = re.compile('，')
     period_regex = re.compile('．')
     new_text = comma_regex.sub('、', new_text)
     new_text = period_regex.sub('。', new_text)
     
+    #クリップボードと画面に出力
     pyperclip.copy(new_text)
     messagebox.showinfo('以下の文章をクリップボードにコピーしました', new_text)
 
